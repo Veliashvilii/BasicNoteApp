@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Lq-hb-pbs">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Edit Note View Controller-->
+        <scene sceneID="prT-Eu-gq1">
+            <objects>
+                <viewController storyboardIdentifier="EditNoteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EvP-ZD-UKf" customClass="EditNoteViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kcu-rp-ZuO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5k6-1w-vzZ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-hc-rKe" userLabel="Note Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="597"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8g1-6x-yQs" userLabel="Title View">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rPJ-aS-lpg" userLabel="Title Text View">
+                                                        <rect key="frame" x="15" y="0.0" width="378" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="22"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="rPJ-aS-lpg" firstAttribute="top" secondItem="8g1-6x-yQs" secondAttribute="top" id="GDF-nk-gdM"/>
+                                                    <constraint firstItem="rPJ-aS-lpg" firstAttribute="leading" secondItem="8g1-6x-yQs" secondAttribute="leading" constant="15" id="MUd-1k-sBR"/>
+                                                    <constraint firstAttribute="height" constant="40" id="T7O-mO-1rT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rPJ-aS-lpg" secondAttribute="trailing" id="hNl-Q6-H2e"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rPJ-aS-lpg" secondAttribute="bottom" id="pih-oz-6XK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fQ-NC-8gU" userLabel="Note View">
+                                                <rect key="frame" x="0.0" y="40" width="393" height="557"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Yc-l1-zYe" userLabel="Note Text View">
+                                                        <rect key="frame" x="15" y="0.0" width="378" height="557"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" red="0.54509803921568623" green="0.58431372549019611" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="0Yc-l1-zYe" firstAttribute="leading" secondItem="9fQ-NC-8gU" secondAttribute="leading" constant="15" id="6UY-PG-NVu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0Yc-l1-zYe" secondAttribute="trailing" id="BaL-dr-QjL"/>
+                                                    <constraint firstItem="0Yc-l1-zYe" firstAttribute="top" secondItem="9fQ-NC-8gU" secondAttribute="top" id="Of8-bV-WTX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0Yc-l1-zYe" secondAttribute="bottom" id="mHu-R2-45b"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8g1-6x-yQs" secondAttribute="trailing" id="C5d-G7-KK4"/>
+                                            <constraint firstItem="9fQ-NC-8gU" firstAttribute="top" secondItem="8g1-6x-yQs" secondAttribute="bottom" id="Q36-Zh-VaR"/>
+                                            <constraint firstItem="8g1-6x-yQs" firstAttribute="top" secondItem="YUa-hc-rKe" secondAttribute="top" id="UMS-iB-eVT"/>
+                                            <constraint firstAttribute="trailing" secondItem="9fQ-NC-8gU" secondAttribute="trailing" id="iiP-Go-LvN"/>
+                                            <constraint firstAttribute="bottom" secondItem="9fQ-NC-8gU" secondAttribute="bottom" id="nZ1-F4-cmo"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-cg-kyU" userLabel="Save Note Button View">
+                                        <rect key="frame" x="0.0" y="597" width="393" height="118"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQT-EP-8Bh">
+                                                <rect key="frame" x="40" y="30" width="313" height="58"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="sAv-cX-oBX"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Edit Note">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.54509803921568623" green="0.5490196078431373" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="saveNoteButtonTapped:" destination="EvP-ZD-UKf" eventType="touchUpInside" id="J8W-zG-txi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="DQT-EP-8Bh" secondAttribute="trailing" constant="40" id="3oF-OL-RpC"/>
+                                            <constraint firstItem="DQT-EP-8Bh" firstAttribute="centerY" secondItem="cj3-cg-kyU" secondAttribute="centerY" id="5OW-Il-1Jy"/>
+                                            <constraint firstItem="DQT-EP-8Bh" firstAttribute="leading" secondItem="cj3-cg-kyU" secondAttribute="leading" constant="40" id="kYm-nA-kVn"/>
+                                            <constraint firstAttribute="height" constant="118" id="vYZ-Xf-6xI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YUa-hc-rKe" secondAttribute="trailing" id="JZS-Kt-cgW"/>
+                                    <constraint firstAttribute="bottom" secondItem="cj3-cg-kyU" secondAttribute="bottom" id="Pe0-xM-pMm"/>
+                                    <constraint firstItem="YUa-hc-rKe" firstAttribute="leading" secondItem="5k6-1w-vzZ" secondAttribute="leading" id="xg8-Cg-yPI"/>
+                                    <constraint firstItem="YUa-hc-rKe" firstAttribute="top" secondItem="5k6-1w-vzZ" secondAttribute="top" id="xrt-Ck-9CN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cs1-uM-oMI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5k6-1w-vzZ" firstAttribute="top" secondItem="Cs1-uM-oMI" secondAttribute="top" id="M5Z-rQ-Fvr"/>
+                            <constraint firstItem="Cs1-uM-oMI" firstAttribute="trailing" secondItem="5k6-1w-vzZ" secondAttribute="trailing" id="Z08-OK-GsQ"/>
+                            <constraint firstItem="5k6-1w-vzZ" firstAttribute="leading" secondItem="Cs1-uM-oMI" secondAttribute="leading" id="jCx-oz-DCK"/>
+                            <constraint firstItem="Cs1-uM-oMI" firstAttribute="bottom" secondItem="5k6-1w-vzZ" secondAttribute="bottom" id="rof-Zz-H3A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qhq-te-a20"/>
+                    <connections>
+                        <outlet property="noteTextView" destination="0Yc-l1-zYe" id="Z5h-aJ-VvH"/>
+                        <outlet property="titleTextView" destination="rPJ-aS-lpg" id="iyG-s6-tld"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKz-DS-KLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826.71755725190837" y="-59.154929577464792"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qLG-5K-aOi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Lq-hb-pbs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ige-rv-qMM">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EvP-ZD-UKf" kind="relationship" relationship="rootViewController" id="YRp-bU-erp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZF-gS-dHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="-59.154929577464792"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
